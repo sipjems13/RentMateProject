@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landlord Login - RentMate</title>
+    <link rel="stylesheet" href="{% static 'css/landlord-login.css' %}">
+</head>
+<body>
+    <a href="{% url 'index' %}" class="header" style="text-decoration: none;">
+        <div class="logo-circle"></div>
+        <span class="logo-text">RentMate</span>
+    </a>
+
+    <div class="main-container">
+        <div class="login-section">
+            {% if messages %}
+                {% for message in messages %}
+                    {% if message.tags == 'error' %}
+                        <div class="error-message">{{ message }}</div>
+                    {% else %}
+                        <div class="success-message">{{ message }}</div>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+            
+            <form method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="login-btn">log in</button>
+            </form>
+            <div class="register-link">
+                Don't have an account? <a href="{% url 'landlord_register' %}">Register here</a>
+            </div>
+        </div>
+
+        <div class="tagline-section">
+            <div class="tagline">
+                simple rentals,<br>happy living
+            </div>
+        </div>
+    </div>
+</body>
+</html>

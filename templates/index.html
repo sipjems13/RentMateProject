@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RentMate - Your friendly rental assistant</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+<body>
+    <a href="{% url 'index' %}" class="header" style="text-decoration: none;">
+        <div class="logo-circle"></div>
+        <span class="logo-text">RentMate</span>
+    </a>
+
+    <div class="main-content">
+        <h1 class="title">RENTMATE</h1>
+        <p class="subtitle">Your friendly rental assistant</p>
+        <div class="button-group">
+            <button class="btn" id="landlord-btn">Landlord</button>
+            <button class="btn" id="tenant-btn">Tenant</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('landlord-btn').addEventListener('click', function() {
+            window.location.href = "{% url 'landlord_login' %}";
+        });
+        document.getElementById('tenant-btn').addEventListener('click', function() {
+            window.location.href = "{% url 'tenant_login' %}";
+        });
+    </script>
+</body>
+</html>
