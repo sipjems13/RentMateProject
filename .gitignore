@@ -5,6 +5,7 @@ __pycache__/
 
 # Virtual environment
 venv/
+env/
 
 # Django-specific files
 *.log
@@ -13,7 +14,7 @@ venv/
 *.pyo
 *.db
 *.sqlite3
-db.sqlite3
+RentMate/db.sqlite3
 media/
 
 # Static files
