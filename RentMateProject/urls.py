@@ -16,12 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from landlord_login.views import index
+from apps.landlord_login.views import index
 
 urlpatterns = [
     path('', index, name='index'),  # Root URL for the landing page
     path('admin/', admin.site.urls),
-    path('login/', include('landlord_login.urls')),
-    path('logout/', include('logout.urls')),
-    path('home/', include('dashboard.urls')),
+    path('login/', include('apps.landlord_login.urls')),
+    path('logout/', include('apps.logout.urls')),
+    path('home/', include('apps.dashboard.urls')),
 ]
