@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    height: 100vh;
+    height: 100%;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../background.jpg') no-repeat center center;
     background-size: cover;
     display: flex;
@@ -47,7 +47,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 100px 60px 15px 60px;
+    padding: 120px 60px 10px 60px;
     max-width: 1400px;
     width: 100%;
     margin: 0 auto;
@@ -60,7 +60,7 @@ body {
 .form-row {
     display: flex;
     gap: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
 
 .form-group {

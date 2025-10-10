@@ -47,7 +47,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 100px 60px 0 60px;
+    padding: 120px 60px 10px 60px;
     max-width: 1400px;
     width: 100%;
     margin: 0 auto;
